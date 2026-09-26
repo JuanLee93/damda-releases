@@ -1,0 +1,47 @@
+name: 🐞 버그 신고
+description: 안 되거나 이상하게 동작하는 걸 알려주세요
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        신고 내용은 누구나 볼 수 있어요. **개인 사진, 폴더 경로, 이메일 같은 정보는 넣지 마세요.**
+        앱의 설정 페이지 → "문제 신고하기"로 열면 버전과 환경이 자동으로 채워져요.
+  - type: textarea
+    id: what
+    attributes:
+      label: 어떤 문제인가요?
+      description: 무엇을 하려다가 어떤 일이 생겼는지 적어주세요. 오류 메시지나 화면 캡처가 있으면 붙여주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 어떻게 하면 생기나요?
+      placeholder: |
+        1. 설정 페이지에서 ...
+        2. ... 버튼을 누르면
+        3. ...
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: 원래는 어떻게 돼야 하나요?
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Damda 버전
+      description: 설정 페이지 "업데이트" 칸에 나와요
+      placeholder: 예) 0.1.6
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 브라우저 / OS
+      placeholder: 예) Windows 11, Chrome
+    validations:
+      required: false

@@ -1,0 +1,27 @@
+name: 💡 기능 제안
+description: 있었으면 하는 기능이나 불편한 점을 알려주세요
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: 신고 내용은 누구나 볼 수 있어요. **개인 사진, 폴더 경로, 이메일 같은 정보는 넣지 마세요.**
+  - type: textarea
+    id: problem
+    attributes:
+      label: 어떤 점이 불편한가요?
+      description: 지금 어떻게 쓰고 있는데 무엇이 번거로운지 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 이렇게 되면 좋겠어요
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Damda 버전
+      placeholder: 예) 0.1.6
+    validations:
+      required: false
